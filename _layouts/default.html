@@ -1,0 +1,39 @@
+
+	<!DOCTYPE HTML>
+	<!--
+		Dimension by HTML5 UP
+		html5up.net | @ajlkn
+		Free for personal and commercial use under the CCA 3.0
+		license (html5up.net/license)
+		Adapted for jekyll and modified by  Ben Patterson https://github.com/BenRuns
+	-->
+	<html>
+		<head>
+			<title>{{site.title}}</title>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		    {% css main.scss  %}
+			<noscript>
+				{% css noscript.scss  %}
+			</noscript>
+			{%- feed_meta -%}
+			{%- if jekyll.environment == 'production' and site.google_analytics -%}
+			  {%- include google-analytics.html -%}
+			{%- endif -%}
+		</head>
+		<body>
+			<div id="wrapper">
+	
+			   {{ content }}
+				<!-- Background -->
+				<div id="bg"></div>
+				{% javascript jquery.min.js %}
+				{% javascript browser.min.js %} 
+				{% javascript breakpoints.min.js %}
+				{% javascript util.js %}
+				{% javascript main.js %}
+			</div>	
+		</body>
+	</html>	
+	
+	<!-- Wrapper --

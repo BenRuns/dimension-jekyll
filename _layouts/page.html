@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div id="main">
+  {% if page.static_only %}
+    <span id="static-indicator"></span>
+  {% endif %}
+  <article class="active">
+    <h2 class="major">{{ page.title }}</h2>
+    {% if page.image %}
+    <span class="image main">
+      <img src="/assets/images/{{ page.image }}" alt="" />
+    </span>
+    {% endif %}
+    {{ content }}
+  </article>
+</div>

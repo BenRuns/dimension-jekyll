@@ -1,0 +1,13 @@
+<footer id="footer">
+    <p class="copyright">
+        &copy; 
+        {% if site.name %} 
+          {{site.name}} 
+        {% else %}
+          Add a name: to your config.yaml
+        {% endif %}
+        {% unless site.attribution_free %} 
+         . Design: <a href="https://html5up.net">HTML5 UP</a>.
+        {% endunless %}
+    </p>
+</footer>

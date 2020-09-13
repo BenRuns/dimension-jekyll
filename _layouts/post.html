@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div id="main">
+  <span id="static-indicator"></span>
+    <article class="active" >
+    <header>
+        <h2 class="major" itemprop="name headline" >
+            {{ page.title }}
+        </h2>
+        <p>
+            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+              {%- assign date_format =  "%b %-d, %Y" -%}
+              {{ page.date | date: date_format }}
+            </time>
+            {%- if page.author -%}
+              • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+            {%- endif -%}
+        </p>
+        
+    </header>
+     
+      {% if page.image %}
+        <span class="image main">
+          <img src="/assets/images/{{ page.image }}" alt="" />
+        </span>
+      {% endif %}
+      {{ content }}
+      <a href="{{ page.previous }}" class="button">Previous</a>
+      <a href="{{ page.next }}" class="button">Next</a>
+      {%- if site.disqus.shortname -%}
+        {%- include disqus_comments.html -%}
+      {%- endif -%}
+    </article>
+  </div>
+
