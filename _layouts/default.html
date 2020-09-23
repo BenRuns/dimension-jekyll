@@ -12,9 +12,9 @@
 			<title>{{site.title}}</title>
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		    {% css main.scss  %}
+		    {% asset main.css  %}
 			<noscript>
-				{% css noscript.scss  %}
+				{% asset noscript.css  %}
 			</noscript>
 			{%- feed_meta -%}
 			{%- if jekyll.environment == 'production' and site.google_analytics -%}
@@ -27,11 +27,11 @@
 			   {{ content }}
 				<!-- Background -->
 				<div id="bg"></div>
-				{% javascript jquery.min.js %}
-				{% javascript browser.min.js %} 
-				{% javascript breakpoints.min.js %}
-				{% javascript util.js %}
-				{% javascript main.js %}
+				{% asset jquery.min.js %}
+				{% asset browser.min.js %} 
+				{% asset breakpoints.min.js %}
+				{% asset util.js %}
+				{% asset main.js %}
 			</div>	
 		</body>
 	</html>	
